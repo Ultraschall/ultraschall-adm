@@ -174,6 +174,15 @@ class AudioDevice {
                     var deviceId = self.id
                     status = AudioObjectSetPropertyData(AudioObjectID(kAudioObjectSystemObject), &address, 0, nil, dataSize, &deviceId)
                     if status == 0 {
+                        address.mSelector = kAudioHardwarePropertyDefaultSystemOutputDevice
+                        dataSize = 0
+                        status = AudioObjectGetPropertyDataSize(AudioObjectID(kAudioObjectSystemObject), &address, 0, nil, &dataSize)
+                        if status == 0 {
+                            var deviceId = self.id
+                            status = AudioObjectSetPropertyData(AudioObjectID(kAudioObjectSystemObject), &address, 0, nil, dataSize, &deviceId)
+                            if status == 0 {
+                            }
+                        }
                     }
                 }
             }
