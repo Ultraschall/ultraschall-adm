@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		420E7E2C2BE65904005E0860 /* ADM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420E7E2B2BE65904005E0860 /* ADM.swift */; };
+		4293063F2BF116E700077E82 /* PropertyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4293063E2BF116E700077E82 /* PropertyHandler.swift */; };
 		42BB029A2BE6BF450060ACCE /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 42BB02992BE6BF450060ACCE /* ArgumentParser */; };
 		42BB029C2BE6BFEC0060ACCE /* AudioDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BB029B2BE6BFEC0060ACCE /* AudioDevice.swift */; };
 		42BB029E2BE6C0270060ACCE /* AudioDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BB029D2BE6C0270060ACCE /* AudioDeviceManager.swift */; };
+		42E69FDF2BF2701E00B89859 /* AudioDeviceFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E69FDE2BF2701E00B89859 /* AudioDeviceFlags.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,8 +30,10 @@
 /* Begin PBXFileReference section */
 		420E7E282BE65904005E0860 /* ADM */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ADM; sourceTree = BUILT_PRODUCTS_DIR; };
 		420E7E2B2BE65904005E0860 /* ADM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADM.swift; sourceTree = "<group>"; };
+		4293063E2BF116E700077E82 /* PropertyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyHandler.swift; sourceTree = "<group>"; };
 		42BB029B2BE6BFEC0060ACCE /* AudioDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDevice.swift; sourceTree = "<group>"; };
 		42BB029D2BE6C0270060ACCE /* AudioDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceManager.swift; sourceTree = "<group>"; };
+		42E69FDE2BF2701E00B89859 /* AudioDeviceFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceFlags.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				420E7E2B2BE65904005E0860 /* ADM.swift */,
 				42BB029D2BE6C0270060ACCE /* AudioDeviceManager.swift */,
 				42BB029B2BE6BFEC0060ACCE /* AudioDevice.swift */,
+				4293063E2BF116E700077E82 /* PropertyHandler.swift */,
+				42E69FDE2BF2701E00B89859 /* AudioDeviceFlags.swift */,
 			);
 			path = ADM;
 			sourceTree = "<group>";
@@ -101,7 +107,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					420E7E272BE65904005E0860 = {
 						CreatedOnToolsVersion = 15.3;
@@ -137,6 +143,8 @@
 				42BB029C2BE6BFEC0060ACCE /* AudioDevice.swift in Sources */,
 				420E7E2C2BE65904005E0860 /* ADM.swift in Sources */,
 				42BB029E2BE6C0270060ACCE /* AudioDeviceManager.swift in Sources */,
+				4293063F2BF116E700077E82 /* PropertyHandler.swift in Sources */,
+				42E69FDF2BF2701E00B89859 /* AudioDeviceFlags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +185,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -240,6 +249,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -266,6 +276,7 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 8J2G689FCZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +289,7 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 8J2G689FCZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";

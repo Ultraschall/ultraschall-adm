@@ -23,13 +23,12 @@
 
 import Foundation
 
-class AudioDevice {
-    var id: UInt32 = 0
-    var name: String? = nil
-    var uid: String? = nil
-    var flags: AudioDeviceFlags = []
+struct AudioDeviceFlags: OptionSet {
+    let rawValue: UInt32
 
-    init(from id: UInt32) {
-        self.id = id
-    }
+    static let input =         AudioDeviceFlags(rawValue: 1 << 0)
+    static let output =        AudioDeviceFlags(rawValue: 1 << 1)
+    static let defaultInput =  AudioDeviceFlags(rawValue: 1 << 2)
+    static let defaultOutput = AudioDeviceFlags(rawValue: 1 << 3)
+    static let system =        AudioDeviceFlags(rawValue: 1 << 4)
 }
